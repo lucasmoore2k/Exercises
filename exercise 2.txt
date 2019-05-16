@@ -1,0 +1,22 @@
+Scanner sc = new Scanner(System.in);
+	
+	double r,pi,area,comprimento;
+	
+	pi = 3.14159;
+	System.out.println("Digite o raio:");
+	r = sc.nextInt();
+	
+	area = pi*(r*r);
+	comprimento = (2*pi)*r;
+	
+	
+	
+	System.out.println("A area do circulo é:"+ area);
+	System.out.println("O comprimento do circulo é:"+ comprimento);
+	
+	
+	
+	
+	
+	sc.close();
+	
