@@ -1,0 +1,63 @@
+public class exercises {
+
+	public static void main(String[] args) {
+		
+
+		Scanner sc = new Scanner(System.in);
+		
+		Locale.setDefault(Locale.US);
+		
+		Funcionario sal= new Funcionario();
+		
+		System.out.println("Name");
+		sal.nome=sc.next();
+		
+		System.out.println("Gross Salary:");
+		
+		sal.grossSalary=sc.nextDouble();
+		
+		System.out.println("Tax");
+		
+		sal.Tax=sc.nextDouble();
+	
+		System.out.println("Employee: " + sal );
+		System.out.println();
+		System.out.println("Which percentage increasing in salary?");
+		double percentagem = sc.nextDouble();
+		sal.increaseSalary(percentagem);
+		
+		System.out.println("Updated data:"+sal);
+		
+		
+        sc.close();
+	}
+}
+	
+
+
+
+
+***********************************
+
+
+public class Funcionario {
+
+	public String nome;
+	public double grossSalary;
+	public double Tax;
+	
+	
+	
+		
+	
+	public double netSalary() {
+		return (grossSalary - Tax);
+	}
+	 public double increaseSalary(double percentagem) {
+		 return grossSalary += grossSalary*(percentagem/100.0);
+	 }
+
+	    public String toString() {
+	    	return nome + "$" + String.format("%.2f ",netSalary());
+	    }
+}

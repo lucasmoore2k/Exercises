@@ -1,0 +1,14 @@
+int n;
+  System.out.println("digite um numero");
+  n=sc.nextInt();
+  
+  if (n % 2==0)
+  {
+	  
+	  System.out.println("par");
+  }
+  
+  else {
+	  
+	  System.out.println("impar");
+  }

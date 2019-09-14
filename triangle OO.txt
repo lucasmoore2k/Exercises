@@ -1,0 +1,65 @@
+
+parte 1*******************
+
+
+package entities;
+
+public class Triangle {
+
+	public double a;
+	public double b
+	public double c;
+	
+	
+	public double area() {
+		double p=(a+b+c)/2.0;
+		return Math.sqrt(p * (p - a) * (p - b) * (p - c))	;	
+	}
+}
+
+
+
+
+parte2 ********************
+
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Triangle;
+
+public class TESTE2 {
+
+	public static void main(String[] args) {
+		//
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		Triangle x, y;
+		x = new Triangle();
+		y = new Triangle();
+
+		System.out.println("Entre com as medidas dos lados X");
+
+		x.a = sc.nextDouble();
+		x.b = sc.nextDouble();
+		x.c = sc.nextDouble();
+		double area = x.area();
+		System.out.println("Entre com as medidas dos lados Y");
+		y.a = sc.nextDouble();
+		y.b = sc.nextDouble();
+		y.c = sc.nextDouble();
+		double area1= y.area();
+		
+
+		System.out.printf("Triangulo X:%.2f", area);
+		System.out.printf("%n Triangulo Y:%.2f", area1);
+
+		if (area > area1) {
+			System.out.printf("%nTriangulo maior:X");
+		} else {
+			System.out.printf("Triangulo maior:Y");
+		}
+	}
+
+}

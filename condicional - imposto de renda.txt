@@ -1,0 +1,37 @@
+	Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double desc1, desc2, desc3;
+		System.out.println("Digite o salario");
+		double sal = sc.nextDouble();
+
+		if (sal < 2000) {
+			System.out.println("Isento");
+
+		}
+
+		else if (sal > 2000.01 && sal <= 3000) {
+
+			desc1 = 8 * (sal - 2000) / 100;
+
+			System.out.printf("O valor de IR1 a pagar é:%,2f", desc1);
+
+		} else if (sal > 3000.01 && sal <= 4500) {
+
+			desc2 = (18 * (sal - 3000) / 100) + (8 * (1000) / 100);
+
+			System.out.printf("O valor de IR2 a pagar é: %.2f", desc2);
+
+		}
+
+		else {
+			desc3 = (28 * (sal - 4500) / 100) + (18 * (1500) / 100) + (8 * (1000) / 100);
+
+			System.out.printf("o valor de IR3 a pagar é: %.2f", desc3);
+		}
+
+		sc.close();
+
+	}
+
+}

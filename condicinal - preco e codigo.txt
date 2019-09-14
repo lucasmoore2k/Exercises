@@ -1,0 +1,32 @@
+int cod,qtd;
+ double preco;
+ 
+ System.out.println("digite codigo");
+ cod=sc.nextInt();
+ System.out.println("digite a qtd");
+ qtd=sc.nextInt();
+ 
+ if (cod==1) {
+	 preco=4.00*qtd;	
+ }
+ 
+ else if (cod==2) {
+	 preco=4.50*qtd;	
+ }
+ 
+ else if (cod==3) {
+	 preco=5.00*qtd;	
+ }
+ else if (cod==4) {
+	 preco=2.00*qtd;	
+ }
+ 
+ else  {
+	 preco =1.50*qtd;
+ }
+		 
+	System.out.println("o preço a pagar é" + preco);	 
+
+  
+   sc.close();
+   

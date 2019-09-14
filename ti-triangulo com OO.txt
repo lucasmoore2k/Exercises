@@ -1,0 +1,42 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entities.Triangle;
+
+public class TESTE2 {
+
+	public static void main(String[] args) {
+		//
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		Triangle x, y;
+		x = new Triangle();
+		y = new Triangle();
+
+		System.out.println("Entre com as medidas dos lados X");
+
+		x.a = sc.nextDouble();
+		x.b = sc.nextDouble();
+		x.c = sc.nextDouble();
+		double p = (x.a + x.b + x.c) / 2;
+		double area = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
+		System.out.println("Entre com as medidas dos lados Y");
+		y.a = sc.nextDouble();
+		y.b = sc.nextDouble();
+		y.c = sc.nextDouble();
+		double p1 = (y.a + y.b + y.c) / 2;
+		double area1= Math.sqrt(p1 * (p1 - y.a) * (p1 - y.b) * (p1 - y.c));
+		
+
+		System.out.printf("Triangulo X:%.2f", area);
+		System.out.printf("%n Triangulo Y:%.2f", area1);
+
+		if (area > area1) {
+			System.out.printf("%nTriangulo maior:X");
+		} else {
+			System.out.printf("Triangulo maior:Y");
+		}
+	}
+
+}

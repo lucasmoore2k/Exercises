@@ -1,0 +1,73 @@
+ENTIDADES*********************************8		
+public class Dolar {
+	
+	public double prices;
+	public double quants;
+	
+	
+
+	public double preco() {
+		return prices;
+	}
+	public double qtd() {
+		return quants;
+	}
+
+	
+    public double amount() {
+    	return (quants*prices)*(1.0+(6.0/100.0));
+    }
+
+}
+
+
+
+ou
+
+
+
+public class Dolar {
+	
+	public double prices;
+	public double quants;
+	
+	
+
+	public double preco() {
+		return prices;
+	}
+	public double qtd() {
+		return quants;
+	}
+
+	
+	public static double iof () {
+		return (6.0/100.0);
+	}
+	
+    public double amount() {
+    	return (quants*prices)*(1.0+iof());
+    }
+
+}
+
+
+
+
+
+APLICACAO**********************************
+
+
+
+Scanner sc = new Scanner(System.in);
+		Dolar dol = new Dolar();
+		
+		System.out.println("Qual o preço do dolar? ");
+		dol.prices=sc.nextDouble();
+		
+		System.out.println("Quantos dolares vai comprar? ");
+		dol.quants=sc.nextDouble();
+		
+		System.out.printf("valor a ser pago: %.2f ",dol.amount());
+		
+		

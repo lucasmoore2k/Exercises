@@ -1,0 +1,53 @@
+
+PACOTE ENTIDADES********************
+public String name;
+	public double nota1;
+	public double nota2;
+	public double nota3;
+	
+	
+	public double finalgrade() {
+		return nota1+nota2+nota3;
+	}
+	
+	public double missing() {
+		if (finalgrade() <60.0) {
+			return 60.0 - finalgrade();
+		}
+		else {
+			return 0.0;
+		}
+	
+
+PACOTE APLICACAO********************
+
+Scanner sc= new Scanner(System.in);
+		
+		Locale.setDefault(Locale.US);
+	
+	
+		Aluno stu  = new Aluno();
+		
+		System.out.println("ALUNO: ");
+		stu.name=sc.next();
+		System.out.println("NOTAS OBTIDAS: ");
+		stu.nota1=sc.nextDouble();
+		stu.nota2=sc.nextDouble();
+		stu.nota3=sc.nextDouble();
+		
+		System.out.printf("FINAL GRADE:%.2f ",stu.finalgrade());
+		
+		if (stu.finalgrade() < 60.0 ) {
+			System.out.printf("%n FAILED %n MISSING %.2f POINTS" ,stu.missing());
+		}
+		else {
+			System.out.printf("%nPASS");
+		}
+			 
+		
+				 }
+		
+		
+		
+	
+}

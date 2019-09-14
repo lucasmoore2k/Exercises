@@ -1,0 +1,25 @@
+Scanner sc =  new Scanner(System.in);
+   
+   int n;
+   
+   System.out.println("Que horas são?");
+  
+   n= sc.nextInt();
+   
+   if (n <12) {
+	   
+	   System.out.println("Bom dia");
+   }
+   else if (n < 18) {
+	   System.out.println("boa tarde");
+   
+   }
+   else {  
+	   System.out.println("boa noite");
+	   
+   }
+   sc.close();
+   
+	}
+	
+}

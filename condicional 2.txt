@@ -1,0 +1,24 @@
+  int n1,n2,n3;
+   
+   System.out.println("Digite tres numeros inteiros");
+   
+   n1= sc.nextInt();
+   n2= sc.nextInt();
+   n3= sc.nextInt();
+   
+  if (n1>n2 && n1>n3)
+  {
+	  System.out.println("mais alto" + n1);  
+  }
+    
+  else if (n2>n1 && n2>n3)  {
+	  System.out.println("mais alto" + n2);
+	  
+  }
+  
+  else {
+	  System.out.println("mais alto" + n3);
+	  
+  }
+  
+   sc.close();
