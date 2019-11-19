@@ -1,0 +1,117 @@
+package app;******************************************
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Rectangule;
+
+public class Produto {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+		
+		Rectangule rec = new Rectangule();
+		
+		
+		System.out.println("Ënter rectangule width and height:");
+		rec.width=sc.nextDouble();
+		rec.height=sc.nextDouble();
+		
+		System.out.println(rec);
+
+		
+	
+	
+	
+		sc.close();
+
+
+
+
+package entities;package entities;
+
+public class Rectangule {
+
+
+	public double width;
+	public double height;
+	
+	
+	public double Area() {
+		return width*height;
+	}
+	
+	public double Perimeter() {
+		return 2*(width+height);
+	}
+     
+	public double Diagonal() {
+		return Math.sqrt(width*width+height*height);
+	}
+
+	public String toString() {
+		return String.format("AREA:"+Area()+"%nPERIMETER:"+Perimeter()+"%nDIAGONAL:"+Diagonal());
+	}
+	
+	
+}
+
+public class Rectangule {
+
+
+	public double width;
+	public double height;
+	
+	
+	public double Area() {
+		return width*height;
+	}
+	
+	public double Perimeter() {
+		return 2*(width+height);
+	}
+     
+	public double Diagonal() {
+		return Math.sqrt(width*width+height*height);
+	}
+
+	public String toString() {
+		return String.format("AREA:"+Area()+"%nPERIMETER:"+Perimeter()+"%nDIAGONAL:"+Diagonal());
+	}
+	
+	
+}
+
+
+
+
+package entities;*********************************************
+
+public class Rectangule {
+
+
+	public double width;
+	public double height;
+	
+	
+	public double Area() {
+		return width*height;
+	}
+	
+	public double Perimeter() {
+		return 2*(width+height);
+	}
+     
+	public double Diagonal() {
+		return Math.sqrt(width*width+height*height);
+	}
+
+	public String toString() {
+		return String.format("AREA:"+Area()+"%nPERIMETER:"+Perimeter()+"%nDIAGONAL:"+Diagonal());
+	}
+	
+	
+}

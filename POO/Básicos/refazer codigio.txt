@@ -1,0 +1,71 @@
+package app;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Aluno;
+
+public class Produto {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+		
+		
+		Aluno stu = new Aluno();
+		
+	System.out.println("Digite 3 notas:");
+	stu.nota1=sc.nextDouble();
+	stu.nota2=sc.nextDouble();
+	stu.nota3=sc.nextDouble();
+	
+	
+	System.out.printf("FINAL GRADE:%.2f ",stu.finalGrade());
+
+	if (stu.finalGrade()<60.0) {
+		System.out.printf("FAILED");
+		System.out.printf("MISSING POINT: %.2f",stu.aprovacao());
+} 
+	else {
+	
+	System.out.println("PASS");
+	}
+	
+	
+		sc.close();
+	
+	}
+
+}
+
+
+
+
+
+package entities;
+
+public class Aluno {
+
+	public String name;
+	public double nota1;
+	public double nota2;
+	public double nota3;
+	
+	
+	public double finalGrade() { 
+		return (nota1+nota2+nota3);
+	}
+
+
+	public double aprovacao() {
+	if (finalGrade() < 60.0) {
+		return 60.0-finalGrade(); 
+	} else {
+		return 0.0;
+		}
+   
+	}
+	
+	}

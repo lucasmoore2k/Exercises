@@ -1,0 +1,25 @@
+package app;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Dolar;
+
+public class Produto {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+		
+		
+		Dolar dol=new Dolar();
+		System.out.println("What is the dollar price?");
+		dol.price=sc.nextDouble();
+		System.out.println("How many dollars will be bought?");
+		dol.quant=sc.nextDouble();
+		
+		System.out.printf("Amount to be paid in reais = %.2f",dol.value());
+		
+		
